@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
-project(Parceltoy CXX)
+project(ParallelLoopsToy CXX)
 
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -w")
 
@@ -17,6 +17,6 @@ if(HPX_FOUND)
     link_directories(${HPX_LIBRARY_DIR})
 endif()
 
-add_executable(parceltoy pingpong_performance.cpp)
-hpx_setup_target(parceltoy COMPONENT_DEPENDENCIES iostreams)
+add_executable(parloopstoy parloops.cpp)
+hpx_setup_target(parloopstoy COMPONENT_DEPENDENCIES iostreams)
 
